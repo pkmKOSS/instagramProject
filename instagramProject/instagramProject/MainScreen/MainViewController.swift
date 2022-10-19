@@ -14,27 +14,18 @@ final class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        feedTableView.dataSource = self
-        feedTableView.register(UINib(
-            nibName: "RecomedationTableViewCell",
-            bundle: nil
-        ), forCellReuseIdentifier: "RecomendCell")
-        feedTableView.rowHeight = UITableView.automaticDimension
-        feedTableView.estimatedRowHeight = 44
     }
 }
 
-extension MainViewController: UITableViewDataSource, UITableViewDelegate {
+extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         3
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecomendCell") as? RecomedationTableViewCell
-        else {print("sdfsdfsdfsdfsdf")
-            return UITableViewCell() }
-        print("\(cell)")
-        cell.frame.size.height = cell.contentView.frame.height
+        guard
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+            else { return UITableViewCell() }
         return cell
     }
 }
