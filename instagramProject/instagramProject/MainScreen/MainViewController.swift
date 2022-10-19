@@ -10,6 +10,7 @@ import UIKit
 /// Главный экран
 final class MainViewController: UIViewController {
 
+    @IBOutlet weak var fieldImage: UIImageView!
     @IBOutlet weak var feedTableView: UITableView!
 
     override func viewDidLoad() {
