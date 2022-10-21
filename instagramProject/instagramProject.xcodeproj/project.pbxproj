@@ -13,6 +13,10 @@
 		6B44470828FDB8C3008A12DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B44470628FDB8C3008A12DB /* Main.storyboard */; };
 		6B44470A28FDB8C5008A12DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B44470928FDB8C5008A12DB /* Assets.xcassets */; };
 		6B44470D28FDB8C5008A12DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B44470B28FDB8C5008A12DB /* LaunchScreen.storyboard */; };
+		6B4B43E22901CCB4008307AD /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B43E12901CCB4008307AD /* TableViewController.swift */; };
+		6B605E8829026C590014901A /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B605E8729026C590014901A /* CommentTableViewCell.swift */; };
+		6B605E8A29026C640014901A /* RecomendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B605E8929026C640014901A /* RecomendTableViewCell.swift */; };
+		6BB0F41A29027647008A212F /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB0F41929027647008A212F /* StringConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		6B44470928FDB8C5008A12DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B44470C28FDB8C5008A12DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B44470E28FDB8C5008A12DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B4B43E12901CCB4008307AD /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		6B605E8729026C590014901A /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		6B605E8929026C640014901A /* RecomendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendTableViewCell.swift; sourceTree = "<group>"; };
+		6BB0F41929027647008A212F /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,14 +64,34 @@
 		6B4446FF28FDB8C3008A12DB /* instagramProject */ = {
 			isa = PBXGroup;
 			children = (
+				6B4B43E32901CCB8008307AD /* ActionSceen */,
 				6B9A1B4528FE68EA008DAADD /* MainScreen */,
 				6B44470028FDB8C3008A12DB /* AppDelegate.swift */,
 				6B44470228FDB8C3008A12DB /* SceneDelegate.swift */,
 				6B44470928FDB8C5008A12DB /* Assets.xcassets */,
 				6B44470B28FDB8C5008A12DB /* LaunchScreen.storyboard */,
 				6B44470E28FDB8C5008A12DB /* Info.plist */,
+				6BB0F41929027647008A212F /* StringConstants.swift */,
 			);
 			path = instagramProject;
+			sourceTree = "<group>";
+		};
+		6B4B43E32901CCB8008307AD /* ActionSceen */ = {
+			isa = PBXGroup;
+			children = (
+				6B605E8629026C370014901A /* Cells */,
+				6B4B43E12901CCB4008307AD /* TableViewController.swift */,
+			);
+			path = ActionSceen;
+			sourceTree = "<group>";
+		};
+		6B605E8629026C370014901A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6B605E8729026C590014901A /* CommentTableViewCell.swift */,
+				6B605E8929026C640014901A /* RecomendTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		6B9A1B4528FE68EA008DAADD /* MainScreen */ = {
@@ -167,9 +195,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B605E8A29026C640014901A /* RecomendTableViewCell.swift in Sources */,
 				6B44470528FDB8C3008A12DB /* MainViewController.swift in Sources */,
 				6B44470128FDB8C3008A12DB /* AppDelegate.swift in Sources */,
+				6BB0F41A29027647008A212F /* StringConstants.swift in Sources */,
+				6B605E8829026C590014901A /* CommentTableViewCell.swift in Sources */,
 				6B44470328FDB8C3008A12DB /* SceneDelegate.swift in Sources */,
+				6B4B43E22901CCB4008307AD /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
