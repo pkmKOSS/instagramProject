@@ -112,19 +112,19 @@ final class ActionScreenTableViewController: UITableViewController {
 
         switch sectionType {
         case .today:
-            let cell = getCell(typesArray: todayCellTypes, row: indexPath.row)
+            let cell = putCellInSection(types: todayCellTypes, row: indexPath.row)
             return cell
         case .yesterday:
-            let cell = getCell(typesArray: yesterdayCellTypes, row: indexPath.row)
+            let cell = putCellInSection(types: yesterdayCellTypes, row: indexPath.row)
             return cell
         case .lastWeek:
-            let cell = getCell(typesArray: lastWeekCellTypes, row: indexPath.row)
+            let cell = putCellInSection(types: lastWeekCellTypes, row: indexPath.row)
             return cell
         }
     }
 
-    private func getCell(typesArray: [CellTypes], row: Int) -> UITableViewCell {
-        let cellType = typesArray.reversed()[row]
+    private func putCellInSection(types: [CellTypes], row: Int) -> UITableViewCell {
+        let cellType = types.reversed()[row]
 
         switch cellType {
         case .commentCellID:

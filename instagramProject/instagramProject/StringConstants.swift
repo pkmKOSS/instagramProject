@@ -9,7 +9,7 @@ import Foundation
 
 /// Константы строк использующихся в проекте.
 enum StringConstants {
-    static let todayLabelText = "  Сегодня"
-    static let yesterdayLabelText = "  Вчера"
-    static let lastWeekLabelText = "  На прошлой неделе"
+    static let todayLabelText = "Сегодня"
+    static let yesterdayLabelText = "Вчера"
+    static let lastWeekLabelText = "На прошлой неделе"
 }
