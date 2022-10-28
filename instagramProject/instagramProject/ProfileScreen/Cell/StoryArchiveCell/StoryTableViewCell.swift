@@ -13,12 +13,12 @@ final class StoryTableViewCell: UITableViewCell {
     // MARK: private properties
 
     private var currentIndex = 0
-    private var model: ProfileInfo?
+    private var profileInfo: ProfileInfo?
     private var indexOfRow: Int?
 
     // MARK: private visual components
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
 
     // MARK: life cycle
 
@@ -35,7 +35,7 @@ final class StoryTableViewCell: UITableViewCell {
     // MARK: public methods
 
     func configureCell(model: ProfileInfo, index: Int) {
-        self.model = model
+        self.profileInfo = model
         indexOfRow = index
         collectionView.reloadData()
     }
@@ -60,17 +60,13 @@ extension StoryTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
             withReuseIdentifier: StringConstants.storyCollectionCellNibNameAndID,
             for: indexPath
         ) as? StoryCollectionViewCell else { return UICollectionViewCell()}
-        guard let model = model else { return UICollectionViewCell() }
-
-        guard currentIndex < model.storysNames?.count ?? 0
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: StringConstants.storyCollectionCellNibNameAndID,
+            for: indexPath
+        ) as? StoryCollectionViewCell,
+              let model = model
         else {
-            currentIndex = 0
-            cell.configureCell(model: model, index: currentIndex)
-            return cell
+            return UICollectionViewCell()
         }
-
-        cell.configureCell(model: model, index: currentIndex)
-        currentIndex += 1
-        return cell
     }
 }

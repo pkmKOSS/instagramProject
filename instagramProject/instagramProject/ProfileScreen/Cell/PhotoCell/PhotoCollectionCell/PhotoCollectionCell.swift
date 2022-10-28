@@ -8,7 +8,7 @@
 import UIKit
 
 /// Ячейка с фотографиями.
-class PhotoCollectionCell: UICollectionViewCell {
+final class PhotoCollectionCell: UICollectionViewCell {
 
     // MARK: private visual components
 
@@ -17,6 +17,8 @@ class PhotoCollectionCell: UICollectionViewCell {
     // MARK: public methods
 
     func configureCell(model: ProfileInfo, index: Int) {
-        photoImageVIew.image = UIImage(named: model.photosNames?[index] ?? StringConstants.defaultString) ?? UIImage()
+        photoImageVIew.image = UIImage(
+            named: model.photosNames?[safe: index] ?? StringConstants.defaultString
+        ) ?? UIImage()
     }
 }

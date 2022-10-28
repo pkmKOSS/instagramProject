@@ -10,7 +10,7 @@ import UIKit
 /// Ячейка с информацией о профиле пользователя.
 final class ProfileInfoCell: UITableViewCell {
 
-    // MARK: private visual components
+    // MARK: private @IBOutlets
 
     @IBOutlet private weak var profileNameLabel: UILabel!
     @IBOutlet private weak var profileSpecNameLabel: UILabel!
@@ -19,9 +19,9 @@ final class ProfileInfoCell: UITableViewCell {
 
     // MARK: public methods
 
-    func configureCell(model: ProfileInfo) {
-        profileNameLabel.text = "\(model.profileName ?? StringConstants.defaultString)"
-        aboutUserLabel.text = "\(model.profileSubscription ?? StringConstants.defaultString)"
-        whoSubscribeLabel.text = "подписан: \(model.whoSubscribe?.first ?? StringConstants.defaultString)"
+    func configureCell(profileInfo: ProfileInfo) {
+        profileNameLabel.text = "\(profileInfo.profileName ?? StringConstants.defaultString)"
+        aboutUserLabel.text = "\(profileInfo.profileSubscription ?? StringConstants.defaultString)"
+        whoSubscribeLabel.text = "подписан: \(profileInfo.whoSubscribe?.first ?? StringConstants.defaultString)"
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B05A59C290C5DA600D30201 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B05A59B290C5DA600D30201 /* Array+.swift */; };
 		6B44470128FDB8C3008A12DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B44470028FDB8C3008A12DB /* AppDelegate.swift */; };
 		6B44470328FDB8C3008A12DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B44470228FDB8C3008A12DB /* SceneDelegate.swift */; };
 		6B44470528FDB8C3008A12DB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B44470428FDB8C3008A12DB /* MainViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B05A59B290C5DA600D30201 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		6B4446FD28FDB8C3008A12DB /* instagramProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagramProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B44470028FDB8C3008A12DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B44470228FDB8C3008A12DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B05A59A290C5D9300D30201 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6B05A59B290C5DA600D30201 /* Array+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		6B4446F428FDB8C3008A12DB = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +105,7 @@
 				6BB0F41B29058C27008A212F /* ProfileScreen */,
 				6B4B43E32901CCB8008307AD /* ActionScreen */,
 				6B9A1B4528FE68EA008DAADD /* MainScreen */,
+				6B05A59A290C5D9300D30201 /* Extension */,
 				6B44470028FDB8C3008A12DB /* AppDelegate.swift */,
 				6B44470228FDB8C3008A12DB /* SceneDelegate.swift */,
 				6B44470928FDB8C5008A12DB /* Assets.xcassets */,
@@ -316,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BB0F44529065854008A212F /* ProfileInfo.swift in Sources */,
+				6B05A59C290C5DA600D30201 /* Array+.swift in Sources */,
 				6B605E8A29026C640014901A /* RecomendTableViewCell.swift in Sources */,
 				6B44470528FDB8C3008A12DB /* MainViewController.swift in Sources */,
 				6B44470128FDB8C3008A12DB /* AppDelegate.swift in Sources */,

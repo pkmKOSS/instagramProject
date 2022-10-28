@@ -13,10 +13,10 @@ final class PhotoTableViewCell: UITableViewCell {
     // MARK: private properties
 
     private var currentIndex = 0
-    private var model: ProfileInfo?
+    private var profileInfo: ProfileInfo?
     private var refreshControl = UIRefreshControl()
     
-    // MARK: private visual components
+    // MARK: private @IBOutlet
 
     @IBOutlet private weak var collectionView: UICollectionView!
 
@@ -30,11 +30,11 @@ final class PhotoTableViewCell: UITableViewCell {
     // MARK: public methods
 
     func configureCell(model: ProfileInfo, index: Int) {
-        self.model = model
+        self.profileInfo = model
         collectionView.reloadData()
     }
 
-    // MARK: - configure scene
+    // MARK: - private methods
 
     private func configureScene() {
         createRefreshControll()
@@ -42,21 +42,15 @@ final class PhotoTableViewCell: UITableViewCell {
         createDelegatesAndDataSource()
     }
 
-    // MARK: - create delegates and dataSource
-
     private func createDelegatesAndDataSource() {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
 
-    // MARK: Create refresh control
-
     private func createRefreshControll() {
         collectionView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(refreshTableViewAcrion), for: .allEvents)
     }
-
-    // MARK: - register cell
 
     private func registerCell() {
         collectionView.register(
@@ -65,21 +59,19 @@ final class PhotoTableViewCell: UITableViewCell {
         )
     }
 
-    // MARK: - @objc private methods
-
     @objc private func refreshTableViewAcrion() {
         var randomNames: [String] = []
         for _ in 0...2 {
-            guard let element = model?.photosNames?.randomElement() else { return }
+            guard let element = profileInfo?.photosNames?.randomElement() else { return }
             randomNames.append(element)
         }
-        model?.photosNames?.append(contentsOf: randomNames)
+        profileInfo?.photosNames?.append(contentsOf: randomNames)
         collectionView.reloadData()
         refreshControl.endRefreshing()
     }
 }
 
-// методы UICollectionViewDelegate и UICollectionViewDataSource
+// MARK: - UICollectionViewDelegate и UICollectionViewDataSource
 extension PhotoTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(
         _ collectionView: UICollectionView,
@@ -93,7 +85,7 @@ extension PhotoTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
                     for: indexPath
                 ) as? PhotoCollectionCell
             else { return UICollectionViewCell()}
-            if let model = model {
+            if let model = profileInfo {
                 guard currentIndex < model.photosNames?.count ?? 0
                 else {
                     currentIndex = 0
@@ -110,7 +102,7 @@ extension PhotoTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        2
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

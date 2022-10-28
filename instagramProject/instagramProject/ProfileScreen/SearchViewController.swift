@@ -10,7 +10,7 @@ import UIKit
 /// Экран поиска профиля.
 final class SearchViewController: UIViewController {
 
-    // MARK: Private types
+    // MARK: Private enums
 
     private enum CellTypes: String {
         case profileCell = "ProfileCell"
@@ -21,8 +21,9 @@ final class SearchViewController: UIViewController {
 
     // MARK: Private properties
 
-    private var model: ProfileInfo?
+    private var profileInfo: ProfileInfo?
     private var currentIndex = 0
+    private var cellTypes: [CellTypes] = [.profileCell, .profileInfoCell, .storyTableViewCell, .photoTableViewCell]
 
     // MARK: Private visual components
 
@@ -35,19 +36,12 @@ final class SearchViewController: UIViewController {
         configureScene()
     }
 
-    // MARK: ConfigureScene
+    // MARK: Private methods
 
     private func configureScene() {
         createModel()
         registerCells()
         createDelegatesAndDataSource()
-    }
-
-    // MARK: Create delegates and data source
-
-    private func createDelegatesAndDataSource() {
-        tableView.dataSource = self
-        tableView.delegate = self
     }
 
     // MARK: Register Cells
@@ -75,7 +69,7 @@ final class SearchViewController: UIViewController {
     // MARK: - Private methods
 
     private func createModel() {
-        model = ProfileInfo(
+        profileInfo = ProfileInfo(
             avatarName: StringConstants.avatarName,
             numberOfPosts: 5,
             numberOfSubscribers: 236,
@@ -96,33 +90,34 @@ final class SearchViewController: UIViewController {
 // методы UITableViewDataSource и UITableViewDelegate
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        cellTypes.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row {
-        case 0:
+        let type = cellTypes[safe: indexPath.row]
+        switch type {
+        case .profileCell:
             guard
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellTypes.profileCell.rawValue)
                     as? ProfileCell
             else { return UITableViewCell() }
-            guard let model = model else { return UITableViewCell() }
+            guard let model = profileInfo else { return UITableViewCell() }
             cell.configureCell(model: model)
             return cell
-        case 1:
+        case .profileInfoCell:
             guard
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellTypes.profileInfoCell.rawValue)
                     as? ProfileInfoCell
             else { return UITableViewCell() }
-            guard let model = model else { return UITableViewCell() }
-            cell.configureCell(model: model)
+            guard let model = profileInfo else { return UITableViewCell() }
+            cell.configureCell(profileInfo: model)
             return cell
-        case 2:
+        case .storyTableViewCell:
             guard
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellTypes.storyTableViewCell.rawValue)
                     as? StoryTableViewCell
             else { return UITableViewCell() }
-            guard let model = model else { return UITableViewCell() }
+            guard let model = profileInfo else { return UITableViewCell() }
             guard currentIndex < model.storysNames?.count ?? 0
             else {
                 currentIndex = 0
@@ -132,12 +127,12 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
             cell.configureCell(model: model, index: currentIndex)
             currentIndex += 1
             return cell
-        case 3:
+        case .photoTableViewCell:
             guard
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellTypes.photoTableViewCell.rawValue)
                     as? PhotoTableViewCell
             else { return UITableViewCell() }
-            guard let model = model else { return UITableViewCell() }
+            guard let model = profileInfo else { return UITableViewCell() }
             guard currentIndex < model.storysNames?.count ?? 0
             else {
                 currentIndex = 0
