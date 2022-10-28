@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileInfoCell" rowHeight="124" id="KGk-i7-Jjw" customClass="ProfileInfoCell" customModule="instagramProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Илон Маск в России" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC2-nO-YMi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="icY-Xu-xn4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CEO @spacex / @teslamotors / сооснователь @paypal www.spacex.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhx-lm-9K8">
+                        <rect key="frame" x="0.0" y="37" width="320" height="26.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="320" id="MO2-06-DeL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Предприниматель" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0PU-sE-ygX">
+                        <rect key="frame" x="0.0" y="19" width="320" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="320" id="1uq-WP-3xl"/>
+                            <constraint firstAttribute="height" constant="21" id="8UJ-bY-kwX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Подписаны: super_rogozin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoA-po-6eN">
+                        <rect key="frame" x="0.0" y="63" width="320" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="W9U-Ha-e8a"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wo8-D0-gVV">
+                        <rect key="frame" x="3" y="93" width="140" height="30"/>
+                        <color key="backgroundColor" systemColor="linkColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Подписаться"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rq6-eT-UBP">
+                        <rect key="frame" x="146" y="92.5" width="140" height="31"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="cKX-Dj-1jB"/>
+                        </constraints>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="gray" title="Написать"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwh-YX-3B7">
+                        <rect key="frame" x="289" y="92.5" width="31" height="31"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="NU1-Ao-O0e"/>
+                            <constraint firstAttribute="width" constant="31" id="TDY-3S-tnB"/>
+                        </constraints>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="gray">
+                            <imageReference key="image" image="chevron.down" catalog="system" symbolScale="small"/>
+                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="qhx-lm-9K8" firstAttribute="top" secondItem="0PU-sE-ygX" secondAttribute="bottom" constant="-3" id="78n-mb-pN0"/>
+                    <constraint firstItem="0PU-sE-ygX" firstAttribute="top" secondItem="HC2-nO-YMi" secondAttribute="bottom" constant="-2" id="82c-UT-9TV"/>
+                    <constraint firstAttribute="bottom" secondItem="Wo8-D0-gVV" secondAttribute="bottom" constant="1" id="9kq-4R-QA0"/>
+                    <constraint firstItem="qhx-lm-9K8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Cnh-GT-fdo"/>
+                    <constraint firstItem="ZoA-po-6eN" firstAttribute="top" secondItem="qhx-lm-9K8" secondAttribute="bottom" constant="-0.5" id="I2k-ME-fFH"/>
+                    <constraint firstItem="ZoA-po-6eN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="JaQ-dL-bxJ"/>
+                    <constraint firstItem="Rq6-eT-UBP" firstAttribute="height" secondItem="Wo8-D0-gVV" secondAttribute="height" multiplier="1.03333" id="M3W-qU-sbR"/>
+                    <constraint firstAttribute="trailing" secondItem="HC2-nO-YMi" secondAttribute="trailing" id="OPM-dL-q8U"/>
+                    <constraint firstItem="Wo8-D0-gVV" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.415625" constant="7" id="Red-v8-Wmp"/>
+                    <constraint firstItem="Wo8-D0-gVV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="3" id="T1Z-xh-1TK"/>
+                    <constraint firstAttribute="trailing" secondItem="Fwh-YX-3B7" secondAttribute="trailing" id="ZXw-jp-Bkm"/>
+                    <constraint firstItem="0PU-sE-ygX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dJf-em-rSg"/>
+                    <constraint firstAttribute="trailing" secondItem="qhx-lm-9K8" secondAttribute="trailing" id="dca-N4-YZr"/>
+                    <constraint firstItem="HC2-nO-YMi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="e3T-6f-PWV"/>
+                    <constraint firstItem="Fwh-YX-3B7" firstAttribute="leading" secondItem="Rq6-eT-UBP" secondAttribute="trailing" constant="3" id="gpL-mm-Obv"/>
+                    <constraint firstItem="Rq6-eT-UBP" firstAttribute="leading" secondItem="Wo8-D0-gVV" secondAttribute="trailing" constant="3" id="imB-xQ-kOx"/>
+                    <constraint firstItem="HC2-nO-YMi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="jnj-pq-Shs"/>
+                    <constraint firstItem="Wo8-D0-gVV" firstAttribute="top" secondItem="ZoA-po-6eN" secondAttribute="bottom" constant="9" id="p80-j3-Rku"/>
+                    <constraint firstAttribute="trailing" secondItem="0PU-sE-ygX" secondAttribute="trailing" id="rfq-0Y-sni"/>
+                    <constraint firstItem="Rq6-eT-UBP" firstAttribute="centerY" secondItem="Wo8-D0-gVV" secondAttribute="centerY" id="rhY-Xo-BiA"/>
+                    <constraint firstItem="Wo8-D0-gVV" firstAttribute="width" secondItem="Rq6-eT-UBP" secondAttribute="width" id="sw7-GE-Z47"/>
+                    <constraint firstItem="Fwh-YX-3B7" firstAttribute="centerY" secondItem="Rq6-eT-UBP" secondAttribute="centerY" id="vdi-mA-Hd3"/>
+                    <constraint firstAttribute="trailing" secondItem="ZoA-po-6eN" secondAttribute="trailing" id="z5f-y8-bpH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="aboutUserLabel" destination="qhx-lm-9K8" id="Rjg-zd-Hbl"/>
+                <outlet property="profileNameLabel" destination="HC2-nO-YMi" id="ZvQ-lw-QV3"/>
+                <outlet property="profileSpecNameLabel" destination="0PU-sE-ygX" id="tw0-2V-SzY"/>
+                <outlet property="whoSubscribeLabel" destination="ZoA-po-6eN" id="W1X-i8-e4F"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCollectionViewCell" id="gTV-IL-0wX" customClass="StoryCollectionViewCell" customModule="instagramProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="309" height="337"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="309" height="337"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdJ-ti-HSs">
+                        <rect key="frame" x="0.0" y="44" width="309" height="293"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balrog" translatesAutoresizingMaskIntoConstraints="NO" id="eSG-5G-w29">
+                                <rect key="frame" x="8" y="0.0" width="293" height="197"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="293" id="2QW-gt-MXM"/>
+                                    <constraint firstAttribute="height" constant="197" id="WbL-aN-GGA"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0f-uS-tVy">
+                                <rect key="frame" x="8" y="197" width="293" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="293" id="HXi-AO-1LM"/>
+                                    <constraint firstAttribute="height" constant="21" id="xqu-ha-Iz4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="q0f-uS-tVy" firstAttribute="centerX" secondItem="eSG-5G-w29" secondAttribute="centerX" id="6dc-I5-zao"/>
+                            <constraint firstItem="eSG-5G-w29" firstAttribute="leading" secondItem="gdJ-ti-HSs" secondAttribute="leading" constant="8" id="Un3-v8-6MG"/>
+                            <constraint firstAttribute="trailing" secondItem="eSG-5G-w29" secondAttribute="trailing" constant="8" id="VDI-UN-jEY"/>
+                            <constraint firstItem="eSG-5G-w29" firstAttribute="top" secondItem="gdJ-ti-HSs" secondAttribute="top" id="lHu-k3-moH"/>
+                            <constraint firstItem="eSG-5G-w29" firstAttribute="height" secondItem="gdJ-ti-HSs" secondAttribute="height" multiplier="0.600683" constant="20.999999999999972" id="pVs-OR-mEG"/>
+                            <constraint firstItem="eSG-5G-w29" firstAttribute="width" secondItem="gdJ-ti-HSs" secondAttribute="width" multiplier="0.94822" priority="999" id="qx7-u2-QoY"/>
+                            <constraint firstItem="q0f-uS-tVy" firstAttribute="top" secondItem="eSG-5G-w29" secondAttribute="bottom" id="qz6-wh-kK6"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="gdJ-ti-HSs" secondAttribute="trailing" id="PSo-1Q-ux6"/>
+                <constraint firstItem="gdJ-ti-HSs" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="ZmZ-pw-eup"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="gdJ-ti-HSs" secondAttribute="bottom" id="iv8-kj-gek"/>
+                <constraint firstItem="gdJ-ti-HSs" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="s2g-3W-pdh"/>
+            </constraints>
+            <size key="customSize" width="309" height="337"/>
+            <connections>
+                <outlet property="storysAvatarImageView" destination="eSG-5G-w29" id="giM-zh-V8R"/>
+                <outlet property="storysNameLabel" destination="q0f-uS-tVy" id="9vl-ur-4f0"/>
+            </connections>
+            <point key="canvasLocation" x="168.84057971014494" y="-73.325892857142847"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="balrog" width="768" height="432"/>
+    </resources>
+</document>
